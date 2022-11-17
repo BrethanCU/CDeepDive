@@ -1,10 +1,87 @@
 #include <stdio.h>
+#include <stdlib.h>
 
+const unsigned int x = 5, y = 2, z = 3;
 
+void bitwiseAND() {
+    // 5 & 2
+    printf("0101 & 0010 = 0000 (%d)", x & y);
+
+    // 5 & 3
+    printf("0101 & 0011 = 0001 (%d)", x & z);
+
+    // 2 & 3
+    // printf("0010 & 0011 = (%d)", y & z);
+}
+
+void bitwiseOR() {
+    // 5 | 2
+    printf("0101 & 0010 = 0111 (%d)", x | y);
+
+    // 5 | 3
+    printf("0101 & 0011 = 0111 (%d)", x | z);
+
+    // 2 | 3
+    // printf("0010 | 0011 = (%d)", y & z);
+}
+
+void bitwiseXOR() {
+    // 5 ^ 2
+    printf("0101 ^ 0010 = 0000 (%d)", x ^ y);
+
+    // 5 ^ 3
+    printf("0101 ^ 0011 = 0001 (%d)", x ^ z);
+
+    // 2 ^ 3
+    // printf("0010 ^ 0011 = (%d)", y & z);
+    /*
+            0010
+            0011
+            ----
+
+    */
+}
+
+void bitwiseLShift() {
+	printf("%d\n", 255 >> 3);
+	printf("%d\n", 170 >> 1);
+	printf("%d\n", 31 >> 5);
+}
 
 int main() {
-	int a = 1, b = 2; // a = 0b0001, b = 0b0010
-	printf("%d\n", a || b);	 // a || b = (n > 0); Generally 1
-	printf("%d\n", a | b);
-	return 0;
+    char select[10];
+
+	int running = 1;
+    while (running) {
+        printf("Q(0) AND(1) OR(2) XOR(3) NOT(4)\nShift Left(5) Shift Right(6):\n");
+        fgets(select, 10, stdin);
+        int selection = atoi(select);
+        switch (selection) {
+            case 0:
+				running = 0;
+				break;
+            case 1:
+				bitwiseAND();
+				break;
+            case 2:
+				bitwiseOR();
+				break;
+            case 3:
+				bitwiseXOR();
+				break;
+            case 4:
+				bitwiseXOR();
+				break;
+            case 5:
+				bitwiseLShift();
+				break;
+            case 6:
+				bitwiseXOR();
+                break;
+            default:
+                break;
+        }
+    }
+
+    return 0;
 }
