@@ -1,4 +1,4 @@
-# Welcome to the OS programming of the workshop!
+# Welcome to the OS programming portion of the workshop!
 In order to run these demos you need to have a Linux operating system!
 
 ## Compiling the demos
@@ -51,7 +51,7 @@ This is the parent
 ## Running the shared memory demo
 Locate the shared memory directory using:
 ```
-$ cd shared\_memory\_example
+$ cd shared_memory_example
 ```
 
 Then try the following:
