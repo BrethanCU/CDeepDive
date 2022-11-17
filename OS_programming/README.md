@@ -2,6 +2,7 @@
 In order to run these demos you need to have a Linux operating system!
 
 ## Compiling the demos
+Simply run make in the terminal using:
 ```
 $ make
 ```
@@ -79,4 +80,21 @@ You wrote: test
 waiting for client...
 Enter some text: end
 You wrote: end
+```
+
+## Running the semaphore demo
+Locate the semaphore directory using:
+```
+$ cd semaphore_example
+```
+
+Then try the following:
+```
+$ ./semaphore 1 &
+[1] 2404
+$ ./semaphore
+OOXXOOXXOOXXOOXXOOXXOOOOXXXXOOXXOOXXOOXX
+2405 - finished
+
+2404 - finished
 ```
